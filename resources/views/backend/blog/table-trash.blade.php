@@ -1,11 +1,11 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <td width="80">Action</td>
-            <td>Title</td>
-            <td width="120">Author</td>
-            <td width="150">Category</td>
-            <td width="170">Date</td>
+            <td width="80">{{ trans('sentence.blog.action') }}</td>
+            <td>{{ trans('sentence.blog.title') }}</td>
+            <td width="120">{{ trans('sentence.blog.author') }}</td>
+            <td width="150">{{ trans('sentence.blog.category') }}</td>
+            <td width="170">{{ trans('sentence.blog.date') }}</td>
         </tr>
     </thead>
     <tbody>

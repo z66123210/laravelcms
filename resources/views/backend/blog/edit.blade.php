@@ -8,15 +8,15 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          Blog
-          <small>Edit post</small>
+            {{ trans('sentence.blog.blog') }}
+          <small>{{ trans('sentence.blog.edit') }}</small>
         </h1>
         <ol class="breadcrumb">
           <li>
-              <a href="{{ url('/home') }}"><i class="fa fa-dashboard"></i> Dashboard</a>
+              <a href="{{ url('/home') }}"><i class="fa fa-dashboard"></i> {{ trans('sentence.blog.dashboard') }}</a>
           </li>
-          <li><a href="{{ route('backend.blog.index') }}">Blog</a></li>
-          <li class="active">Edit Post</li>
+          <li><a href="{{ route('backend.blog.index') }}">{{ trans('sentence.blog.blog') }}</a></li>
+          <li class="active">{{ trans('sentence.blog.edit') }}</li>
         </ol>
       </section>
 

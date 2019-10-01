@@ -4,11 +4,11 @@
 
 <div class="login-box">
   <div class="login-logo">
-    <a href="/"><b>My</b>BLOG</a>
+    <a href="/"><b>{{ trans('sentence.login.raymondblog') }}</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Sign in to start your session</p>
+    <p class="login-box-msg">{{ trans('sentence.login.signin1') }}</p>
 
     <form method="POST" action="{{ url('/login') }}">
         {{ csrf_field() }}
@@ -36,20 +36,20 @@
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
-              <input type="checkbox" name="remember"> Remember Me
+              <input type="checkbox" name="remember"> {{ trans('sentence.login.rememberme') }}
             </label>
           </div>
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('sentence.login.signin') }}</button>
         </div>
         <!-- /.col -->
       </div>
     </form>
 
     <br>
-    <a href="{{ url('/password/reset') }}">I forgot my password</a><br>
+    <a href="{{ url('/password/reset') }}">{{ trans('sentence.login.forgetpass') }}</a><br>
 
   </div>
   <!-- /.login-box-body -->

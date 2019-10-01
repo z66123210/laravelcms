@@ -8,15 +8,15 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          Blog
-          <small>Display All blog posts</small>
+          {{ trans('sentence.blog.blog') }}
+          <small>{{ trans('sentence.blog.display') }}</small>
         </h1>
         <ol class="breadcrumb">
           <li>
-              <a href="{{ url('/home') }}"><i class="fa fa-dashboard"></i> Dashboard</a>
+              <a href="{{ url('/home') }}"><i class="fa fa-dashboard"></i> {{ trans('sentence.blog.dashboard') }}</a>
           </li>
-          <li><a href="{{ route('backend.blog.index') }}">Blog</a></li>
-          <li class="active">All Posts</li>
+          <li><a href="{{ route('backend.blog.index') }}">{{ trans('sentence.blog.blog') }}</a></li>
+          <li class="active">{{ trans('sentence.blog.all') }}</li>
         </ol>
       </section>
 
@@ -27,7 +27,7 @@
               <div class="box">
                 <div class="box-header clearfix">
                     <div class="pull-left">
-                        <a href="{{ route('backend.blog.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> Add New</a>
+                        <a href="{{ route('backend.blog.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> {{ trans('sentence.blog.add') }}</a>
                     </div>
                     <div class="pull-right" style="padding:7px 0;">
                         <?php $links = [] ?>
@@ -46,7 +46,7 @@
 
                     @if (!$posts)
                         <div class="alert alert-danger">
-                            <strong>No record found</strong>
+                            <strong>{{ trans('sentence.blog.notfound') }}</strong>
                         </div>
                     @else
                         @if($onlyTrashed)

@@ -24,7 +24,7 @@
     </div>
 
     <div class="comment-footer padding-10">
-        <h3>Leave a comment</h3>
+        <h3>{{ trans('sentence.frontcomment.leavecomment') }}</h3>
 
         @if(session('message'))
             <div class="alert alert-info">
@@ -34,7 +34,7 @@
 
         {!! Form::open(['route' => ['blog.comments', $post->slug]]) !!}
             <div class="form-group required {{ $errors->has('author_name') ? 'has-error' : '' }}">
-                <label for="name">Name</label>
+                <label for="name">{{ trans('sentence.frontcomment.name') }}</label>
                 {!! Form::text('author_name', null, ['class' => 'form-control']) !!}
                 @if($errors->has('author_name'))
                     <span class="help-block">
@@ -43,7 +43,7 @@
                 @endif
             </div>
             <div class="form-group required {{ $errors->has('author_email') ? 'has-error' : '' }}">
-                <label for="email">Email</label>
+                <label for="email">{{ trans('sentence.frontcomment.email') }}</label>
                 {!! Form::text('author_email', null, ['class' => 'form-control']) !!}
                 @if($errors->has('author_email'))
                     <span class="help-block">
@@ -52,11 +52,11 @@
                 @endif
             </div>
             <div class="form-group">
-                <label for="website">Website</label>
+                <label for="website">{{ trans('sentence.frontcomment.website') }}</label>
                 {!! Form::text('author_url', null, ['class' => 'form-control']) !!}
             </div>
             <div class="form-group required {{ $errors->has('body') ? 'has-error' : '' }}">
-                <label for="comment">Comment</label>
+                <label for="comment">{{ trans('sentence.frontcomment.comment') }}</label>
                 {!! Form::textarea('body', null, ['row' => 6, 'class' => 'form-control']) !!}
                 @if($errors->has('body'))
                     <span class="help-block">
@@ -66,12 +66,12 @@
             </div>
             <div class="clearfix">
                 <div class="pull-left">
-                    <button type="submit" class="btn btn-lg btn-success">Submit</button>
+                    <button type="submit" class="btn btn-lg btn-success">{{ trans('sentence.frontcomment.submit') }}</button>
                 </div>
                 <div class="pull-right">
                     <p class="text-muted">
                         <span class="required">*</span>
-                        <em>Indicates required fields</em>
+                        <em>{{ trans('sentence.frontcomment.indicate') }}</em>
                     </p>
                 </div>
             </div>

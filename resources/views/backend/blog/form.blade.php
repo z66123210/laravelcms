@@ -39,7 +39,7 @@
 <div class="col-xs-3">
     <div class="box">
         <div class="box-header with-border">
-            <h3 class="box-title">Publish</h3>
+            <h3 class="box-title">{{ trans('sentence.blog.publish') }}</h3>
         </div>
         <div class="box-body">
             <div class="form-group {{ $errors->has('published_at') ? 'has-error' : '' }}">
@@ -59,7 +59,7 @@
         </div>
         <div class="box-footer clearfix">
             <div class="pull-left">
-                <a id="draft-btn" class="btn btn-default">Save Draft</a>
+                <a id="draft-btn" class="btn btn-default">{{ trans('sentence.blog.save') }}</a>
             </div>
             <div class="pull-right">
                 {!! Form::submit('Publish', ['class' => 'btn btn-primary']) !!}
@@ -69,7 +69,7 @@
 
     <div class="box">
         <div class="box-header with-border">
-            <h3 class="box-title">Category</h3>
+            <h3 class="box-title">{{ trans('sentence.blog.category') }}</h3>
         </div>
         <div class="box-body">
             <div class="form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
@@ -84,7 +84,7 @@
 
     <div class="box">
         <div class="box-header with-border">
-            <h3 class="box-title">Tags</h3>
+            <h3 class="box-title">{{ trans('sentence.blog.tags') }}</h3>
         </div>
         <div class="box-body">
             <div class="form-group">
@@ -95,7 +95,7 @@
 
     <div class="box">
         <div class="box-header with-border">
-            <h3 class="box-title">Feature Image</h3>
+            <h3 class="box-title">{{ trans('sentence.blog.image') }}</h3>
         </div>
         <div class="box-body text-center">
             <div class="form-group {{ $errors->has('image') ? 'has-error' : '' }}">
@@ -105,8 +105,8 @@
                   </div>
                   <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
                   <div>
-                    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span>{!! Form::file('image') !!}</span>
-                    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                    <span class="btn btn-default btn-file"><span class="fileinput-new">{{ trans('sentence.blog.select') }}</span><span class="fileinput-exists">{{ trans('sentence.blog.change') }}</span>{!! Form::file('image') !!}</span>
+                    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">{{ trans('sentence.blog.remove') }}</a>
                   </div>
                 </div>
 

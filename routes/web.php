@@ -54,3 +54,6 @@ Route::get('/backend/users/confirm/{users}', [
 ]);
 Route::resource('/backend/users', 'Backend\UsersController', ['as' => 'backend']);
 
+
+Route::get('lang/{locale}', 'LocalizationController@index');
+

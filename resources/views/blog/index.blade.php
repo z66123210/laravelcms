@@ -4,10 +4,13 @@
 
     <div class="container">
         <div class="row">
+
+                @include('layouts.sidebar')
+
             <div class="col-md-8">
                 @if (! $posts)
                     <div class="alert alert-warning">
-                        <p>Nothing Found</p>
+                        <p>{{ trans('sentence.blogindex.nothingfound') }}</p>
                     </div>
                 @else
                     @include('blog.alert')
@@ -40,7 +43,7 @@
                                         </ul>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="{{ route('blog.show', $post->slug) }}">Continue Reading &raquo;</a>
+                                        <a href="{{ route('blog.show', $post->slug) }}">{{ trans('sentence.blogindex.continuereading') }} &raquo;</a>
                                     </div>
                                 </div>
                             </div>
@@ -55,7 +58,7 @@
                 </nav>
             </div>
 
-            @include('layouts.sidebar')
+            
         </div>
     </div>
 

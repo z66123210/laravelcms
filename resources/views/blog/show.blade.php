@@ -4,6 +4,9 @@
 
     <div class="container">
         <div class="row">
+
+             @include('layouts.sidebar')
+
             <div class="col-md-8">
                 <article class="post-item post-detail">
                     @if ($post->image_url)
@@ -56,7 +59,7 @@
                 @include('blog.comments')
             </div>
 
-            @include('layouts.sidebar')
+            
         </div>
     </div>
 

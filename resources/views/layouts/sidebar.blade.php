@@ -15,7 +15,7 @@
 
         <div class="widget">
             <div class="widget-heading">
-                <h4>Categories</h4>
+                <h4>{{ trans('sentence.frontsidebar.Categories')}}</h4>
             </div>
             <div class="widget-body">
                 <ul class="categories">
@@ -31,7 +31,7 @@
 
         <div class="widget">
             <div class="widget-heading">
-                <h4>Popular Posts</h4>
+                <h4>{{ trans('sentence.frontsidebar.popularpost')}}</h4>
             </div>
             <div class="widget-body">
                 <ul class="popular-posts">
@@ -58,7 +58,7 @@
 
         <div class="widget">
             <div class="widget-heading">
-                <h4>Tags</h4>
+                <h4>{{ trans('sentence.frontsidebar.tags')}}</h4>
             </div>
             <div class="widget-body">
                 <ul class="tags">
@@ -71,7 +71,7 @@
 
         <div class="widget">
             <div class="widget-heading">
-                <h4>Archives</h4>
+                <h4>{{ trans('sentence.frontsidebar.archives')}}</h4>
             </div>
             <div class="widget-body">
                 <ul class="categories">

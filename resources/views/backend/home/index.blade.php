@@ -1,6 +1,6 @@
 @extends('layouts.backend.main')
 
-@section('title', 'MyBlog | Dashboar')
+@section('title', 'Raymonds Blog')
 
 @section('content')
 
@@ -8,10 +8,10 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          Dasbhboard
+          {{ trans('sentence.backend.dashboard') }}
         </h1>
         <ol class="breadcrumb">
-          <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
+          <li class="active"><i class="fa fa-dashboard"></i> {{ trans('sentence.backend.dashboard') }}</li>
         </ol>
       </section>
 
@@ -22,11 +22,11 @@
               <div class="box">
                 <!-- /.box-header -->
                 <div class="box-body ">
-                      <h3>Welcome to MyBlog!</h3>
-                      <p class="lead text-muted">Hallo {{ Auth::user()->name }}, Welcome to MyBlog</p>
+                      <h3>{{ trans('sentence.backend.welcome') }}</h3>
+                      <p class="lead text-muted">{{ trans('sentence.backend.hello') }} {{ Auth::user()->name }}, {{ trans('sentence.backend.welcome') }}</p>
 
-                      <h4>Get started</h4>
-                      <p><a href="{{ route('backend.blog.create') }}" class="btn btn-primary">Write your first blog post</a> </p>
+                      <h4>{{ trans('sentence.backend.start') }}</h4>
+                      <p><a href="{{ route('backend.blog.create') }}" class="btn btn-primary">{{ trans('sentence.backend.write') }}</a> </p>
                 </div>
                 <!-- /.box-body -->
               </div>
